@@ -39,6 +39,29 @@
 		$varPassword = $_POST['passwordLoginPengguna'];
 		$varPassword = md5($varPassword);
 
+		$sql = "SELECT * FROM masyarakat WHERE nik='$varNik' AND password='$varPassword';";
+
+		$result = mysqli_query($conn, $sql);
+
+		if(mysqli_num_rows($result) == 1) {
+			$login = mysqli_fetch_assoc($result);
+
+			if($login['nik'] == $varNik && $login['password'] == $varPassword){
+				$_SESSION['nik'] = $login['nik'];
+				$_SESSION['username'] = $login['username'];
+				$_SESSION['password'] = $login['password'];
+				$_SESSION['nama'] = $login['nama'];
+				$_SESSION['telpon'] = $login['telp'];
+
+				echo notifikasi('Login Berhasil!', 'dashboard.php');
+			}
+			else{
+				echo notifikasi('NIK atau Password salah!', 'login.php');
+			}
+		}
+		else{
+			echo notifikasi('NIK atau Password salah!', 'login.php');
+		}
 	}
 
 ?>
