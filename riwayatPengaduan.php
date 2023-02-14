@@ -86,7 +86,7 @@
 						</td>
 
 						<td>
-							Lihat | Delete | Edit
+							<a href="editPengaduan.php?edit=<?php echo $data["id_pengaduan"] ?>">edit<i>&#x270F;</i></a>
 						</td>
 					</tr>
 

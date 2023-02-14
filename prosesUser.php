@@ -77,5 +77,15 @@
 
 		echo notifikasi('Data Berhasil Ditambah!', 'riwayatPengaduan.php');
 	}
+	elseif(isset($_POST['submitEditLaporanPengaduan'])){
+		$varNik = $_SESSION['nik'];
+		$varIdPengaduan = $_POST['idLaporanPengaduan'];
+		$varTanggalPengaduan = $tgl;
+		$varIsiLaporan = $_POST['editLaporanPengaduan'];
 
+		$query = "SELECT * FROM pengaduan WHERE (id_pengaduan='$varIdPengaduan' AND nik='$varNik');";
+		$sql = mysqli_query($conn, $query);
+		$result = mysqli_fetch_assoc($sql);
+	}
+	
 ?>
