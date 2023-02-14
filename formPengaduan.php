@@ -21,10 +21,10 @@
   <h2>FORM PENGADUAN</h2>
 
   <div class="container">
-  <form action="proses.php" method="POST" enctype="multipart/form-data">
+
+  <form action="prosesUser.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
-      
       <label for="subject">Subject:</label>
     </div>
     <div class="col-75">
@@ -45,12 +45,13 @@
 
   </div>
 
-
   <br>
   <div class="row">
-    <input type="submit" value="Submit">
+    <input type="submit" name="submitIsiLaporanPengaduan" value="Submit">
   </div>
+
   </form>
+
 </div>
 </div>
 

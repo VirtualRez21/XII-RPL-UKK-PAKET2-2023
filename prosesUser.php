@@ -63,5 +63,19 @@
 			echo notifikasi('NIK atau Password salah!', 'login.php');
 		}
 	}
+	elseif(isset($_POST['submitIsiLaporanPengaduan'])) {
+		$varTanggal = $tgl;
+		$varNik = $_SESSION['nik'];
+		$varLaporan = $_POST['isiLaporanPengaduan'];
+		$namaFoto = $tglAndWaktu.$_FILES['isiFotoLaporanPengaduan']['name'];
+		$foto = $_FILES['isiFotoLaporanPengaduan']['tmp_name'];
+		$status = '0';
+
+		$sql = "INSERT INTO pengaduan VALUES(null, '$varTanggal', '$varNik', '$varLaporan', '$namaFoto', '$status');";
+		move_uploaded_file($foto, 'media/laporan/'.$namaFoto);
+		$result = mysqli_query($conn, $sql);
+
+		echo notifikasi('Data Berhasil Ditambah!', 'riwayatPengaduan.php');
+	}
 
 ?>

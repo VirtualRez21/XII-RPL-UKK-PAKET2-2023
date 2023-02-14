@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2023 at 05:15 AM
+-- Generation Time: Feb 14, 2023 at 05:08 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -35,6 +35,13 @@ CREATE TABLE `masyarakat` (
   `telp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `masyarakat`
+--
+
+INSERT INTO `masyarakat` (`nik`, `nama`, `username`, `password`, `telp`) VALUES
+('12345678', 'Uyiz Dofukizi', 'uyizdfkz', '25d55ad283aa400af464c76d713c07ad', '0852525252525');
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +56,13 @@ CREATE TABLE `pengaduan` (
   `foto` varchar(255) NOT NULL,
   `status` enum('0','proses','selesai') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `isi_laporan`, `foto`, `status`) VALUES
+(1, '2023-02-14', '12345678', 'Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. Nadya telat karna suatu alasan .. ', '2023-02-1411-34-56amIMG-20211014-WA0113.jpg', '0');
 
 -- --------------------------------------------------------
 
@@ -118,7 +132,7 @@ ALTER TABLE `tanggapan`
 -- AUTO_INCREMENT for table `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `petugas`
