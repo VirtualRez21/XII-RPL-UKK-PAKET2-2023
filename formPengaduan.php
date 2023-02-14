@@ -24,7 +24,7 @@
   <form action="proses.php" method="POST" enctype="multipart/form-data">
   <div class="row">
     <div class="col-25">
-    	
+      
       <label for="subject">Subject:</label>
     </div>
     <div class="col-75">
@@ -38,9 +38,9 @@
     </div>
 
     <div class="col-75">
-	<label for="images">
-		<input type="file" name="isiFotoLaporanPengaduan" id="images" accept="image/*" required>
-	</label>
+  <label for="images">
+    <input type="file" name="isiFotoLaporanPengaduan" id="images" accept="image/*" required>
+  </label>
     </div>
 
   </div>

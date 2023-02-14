@@ -10,10 +10,8 @@
 	<title>REGISTRASI AKUN</title>
 </head>
 <body>
-
+	<center>
 	<form action="prosesUser.php" method="POST">
-		<center>
-			
 		<table>
 			<tr>
 				<td>
@@ -88,9 +86,11 @@
 
 		<input type="submit" name="submitRegistrasiPengguna" value="Registrasi">
 
-		</center>
-
 	</form>
+
+	<p>Sudah Punya Akun? Klik <a href="login.php">Di Sini</a></p>
+
+	</center>
 
 </body>
 </html>

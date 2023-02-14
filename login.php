@@ -44,6 +44,8 @@
 
 		</form>
 
+		<p>Belum Punya Akun? Klik <a href="registrasiAccount.php">Di Sini</a></p>
+
 	</center>
 </body>
 </html>

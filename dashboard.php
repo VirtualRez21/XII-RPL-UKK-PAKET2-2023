@@ -1,5 +1,10 @@
 <?php
+  
+  require 'koneksi.php';
 
+  if($_SESSION['nik'] == ""){
+    header('location: login.php');
+  }
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +25,8 @@
 <div class="content"><div id=rela>
   <h2>SELAMAT DATANG PENGGUNA</h2></div>
   <div id="relative"> <h4><p>website ini adalah sebuah platform </p>
-  	<p>untuk masyarakat memberikan keluhan dan pengaduan</p>
-  	<P>agar dapat segera ditanggapi</P></h4>
+    <p>untuk masyarakat memberikan keluhan dan pengaduan</p>
+    <P>agar dapat segera ditanggapi</P></h4>
   </div>
 </div>
 

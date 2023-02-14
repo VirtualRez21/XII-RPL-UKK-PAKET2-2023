@@ -81,7 +81,7 @@ input[type=submit]:hover {
 }
 
 .col-75 {
-	
+  
   float: left;
   width: 75%;
   margin-top: 6px;
@@ -118,7 +118,7 @@ input[type=file]::file-selector-button {
     padding: 13px;
     border-radius: 10px;
     position: relative;
- 	top: 25px;
+  top: 25px;
     left: 10px;
     width: 99%;
     height: 150px; }
@@ -128,7 +128,7 @@ input[type=file]::file-selector-button {
     padding: 1px;
     border-radius: 10px;
     position: relative;
- 	top: 15px;
+  top: 15px;
     left: 10px;
     width: 99%;
     height: 50px; }
