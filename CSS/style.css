@@ -114,14 +114,15 @@ input[type=file]::file-selector-button {
   cursor: pointer;
 }
 #relative {
-    background-color: #f1f1f1;
-    padding: 13px;
-    border-radius: 10px;
-    position: relative;
+  background-color: #f1f1f1;
+  padding: 13px;
+  border-radius: 10px;
+  position: relative;
   top: 25px;
-    left: 10px;
-    width: 99%;
-    height: 150px; }
+  left: 10px;
+  width: 99%;
+  height: 150px;
+}
 
     #rela {
     background-color: #f1f1f1;

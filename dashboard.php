@@ -18,7 +18,7 @@
 <div class="sidebar">
   <a class="active" href="dashboard.php">DASHBOARD</a>
   <a href="formPengaduan.php">FORM PENGADUAN</a>
-  <a href="#contact">RIWAYAT PENGADUAN</a>
+  <a href="riwayatPengaduan.php">RIWAYAT PENGADUAN</a>
   <a href="#">LOGOUT</a>
 </div>
 
