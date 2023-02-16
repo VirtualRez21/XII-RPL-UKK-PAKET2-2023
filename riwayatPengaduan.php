@@ -17,6 +17,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+	<script type="text/javascript">
+		function checkDelete(){
+			return confirm('Yakin Data Ingin Dihapus?');
+		}
+	</script>
+
 	<title>Riwayat Pengaduan</title>
 </head>
 <body>
@@ -87,6 +94,8 @@
 
 						<td>
 							<a href="editPengaduan.php?edit=<?php echo $data["id_pengaduan"] ?>">edit<i>&#x270F;</i></a>
+							<br>
+							<a onclick="return checkDelete()" href="prosesUser.php?delete=<?php echo $data['id_pengaduan'] ?>">Delete<i>&#x1F5D1;</i></a>
 						</td>
 					</tr>
 
