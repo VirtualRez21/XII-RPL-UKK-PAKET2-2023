@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2023 at 09:58 AM
+-- Generation Time: Feb 17, 2023 at 10:42 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -35,6 +35,13 @@ CREATE TABLE `masyarakat` (
   `telp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `masyarakat`
+--
+
+INSERT INTO `masyarakat` (`nik`, `nama`, `username`, `password`, `telp`) VALUES
+('12345678', '12345678', '12345678', '25d55ad283aa400af464c76d713c07ad', '12345678');
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +57,13 @@ CREATE TABLE `pengaduan` (
   `status` enum('0','proses','selesai') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `isi_laporan`, `foto`, `status`) VALUES
+(5, '2023-02-15', '12345678', 'nadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telat', '2023-02-1501-15-01pmIMG-20211014-WA0113.jpg', '0');
+
 -- --------------------------------------------------------
 
 --
@@ -64,6 +78,13 @@ CREATE TABLE `petugas` (
   `telp` varchar(13) NOT NULL,
   `level` enum('admin','petugas') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `petugas`
+--
+
+INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`, `telp`, `level`) VALUES
+(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0813XXXX2987', 'admin');
 
 -- --------------------------------------------------------
 
@@ -118,13 +139,13 @@ ALTER TABLE `tanggapan`
 -- AUTO_INCREMENT for table `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tanggapan`

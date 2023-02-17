@@ -32,7 +32,7 @@
 	  <a href="dashboard.php">DASHBOARD</a>
 	  <a href="formPengaduan.php">FORM PENGADUAN</a>
 	  <a class="active" href="riwayatPengaduan.php">RIWAYAT PENGADUAN</a>
-	  <a href="#">LOGOUT</a>
+	  <a href="logout.php">LOGOUT</a>
 	</div>
 
 	<div class="content">
