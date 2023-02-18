@@ -1,5 +1,20 @@
 <?php
+	require 'function.php';
+	require '../fungsi.php';
+	session_start();
 
+	$login = new Signin();
+
+	if(isset($_POST["submitLoginPetugas"])){
+		$result = $login->login($_POST["usernameLoginPetugas"], $_POST["passwordLoginPetugas"]);
+
+		if($result == 1){
+			echo notifikasi('Login Berhasil!', 'dashboard.php');
+		}
+		elseif($result == 10){
+			echo notifikasi('Username atau Password Salah', 'login.php');
+		}
+	}
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +27,7 @@
 <body>
 	<center>
 
-		<form action="prosesPetugas.php" method="POST">
+		<form action="login.php" method="POST">
 
 		<table>
 			<tr>
