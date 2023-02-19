@@ -118,10 +118,14 @@ button:hover {
   color: white;
 }
 
-div.content {
+.content {
   margin-left: 200px;
   padding: 1px 16px;
   text-align: center;
+}
+.content2 {
+  margin-left: 200px;
+  padding: 1px 16px;
 }
 
 .container {
