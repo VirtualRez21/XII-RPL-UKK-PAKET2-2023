@@ -5,8 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <title>FORM PENGADUAN MASYARAKAT</title>
 </head>
 <body>
 
@@ -22,39 +24,38 @@
 
   <div class="container">
 
-  <form action="prosesUser.php" method="POST" enctype="multipart/form-data">
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Subject:</label>
+    <form action="prosesUser.php" method="POST" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject:</label>
+      </div>
+
+      <div class="col-75">
+        <textarea id="subject" name="isiLaporanPengaduan" placeholder="ISI LAPORAN ..." style="height:200px"></textarea>
+      </div>
     </div>
-    <div class="col-75">
-      <textarea id="subject" name="isiLaporanPengaduan" placeholder="ISI LAPORAN ..." style="height:200px"></textarea>
+
+     <div class="row">
+      <div class="col-25">
+        <label for="subject">Foto:</label>
+      </div>
+
+      <div class="col-75">
+        <label for="images">
+          <input type="file" name="isiFotoLaporanPengaduan" id="images" accept="image/*" required>
+        </label>
+      </div>
+
     </div>
+
+    <br>
+    <div class="row">
+      <input type="submit" name="submitIsiLaporanPengaduan" value="Submit">
+    </div>
+
+    </form>
+
   </div>
-
-   <div class="row">
-    <div class="col-25">
-      <label for="subject">Foto:</label>
-    </div>
-
-    <div class="col-75">
-  <label for="images">
-    <input type="file" name="isiFotoLaporanPengaduan" id="images" accept="image/*" required>
-  </label>
-    </div>
-
-  </div>
-
-  <br>
-  <div class="row">
-    <input type="submit" name="submitIsiLaporanPengaduan" value="Submit">
-  </div>
-
-  </form>
-
 </div>
-</div>
-
 </body>
-
 </html>

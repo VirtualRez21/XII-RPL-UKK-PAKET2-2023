@@ -5,92 +5,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>REGISTRASI AKUN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <title>REGISTRASI AKUN PENGADUAN MASYARAKAT</title>
 </head>
+
 <body>
-	<center>
-	<form action="prosesUser.php" method="POST">
-		<table>
-			<tr>
-				<td>
-					<label>NIK</label>
-				</td>
+  <form action="prosesUser.php" method="POST" class="formLoginRegist">
+    <h2 style="text-align: center;">FORM REGISTRASI</h2>
+    <div class="container">
+      <label for="nikRegistrasiPengguna"><b>NIK:</b></label>
+      <input type="number" placeholder="Enter NIK" name="nikRegistrasiPengguna" required>
 
-				<td>
-					:
-				</td>
+      <label for="namaRegistrasiPengguna"><b>Nama:</b></label>
+      <input type="text" placeholder="Enter Nama" name="namaRegistrasiPengguna" required>
 
-				<td>
-					<input type="number" name="nikRegistrasiPengguna" required>
-				</td>
-			</tr>
+      <label for="usernameRegistrasiPengguna"><b>Username:</b></label>
+      <input type="text" placeholder="Enter Username" name="usernameRegistrasiPengguna" required>
 
-			<tr>
-				<td>
-					<label>NAMA</label>
-				</td>
+      <label for="passwordRegistrasiPengguna"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="passwordRegistrasiPengguna" required>
 
-				<td>
-					:
-				</td>
+      <label for="teleponRegistrasiPengguna"><b>Telepon/HP:</b></label>
+      <input type="text" placeholder="Enter Telepon/HP" name="teleponRegistrasiPengguna" required>
+      
+      <center> 
+        <button type="submit" name="submitRegistrasiPengguna">Registrasi</button>
+      </center> 
 
-				<td>
-					<input type="text" name="namaRegistrasiPengguna" required>
-				</td>
-			</tr>
+    </div>
+  </form>
 
-			<tr>
-				<td>
-					<label>USERNAME</label>
-				</td>
-
-				<td>
-					:
-				</td>
-
-				<td>
-					<input type="text" name="usernameRegistrasiPengguna" required>
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<label>PASSWORD</label>
-				</td>
-
-				<td>
-					:
-				</td>
-
-				<td>
-					<input type="password" name="passwordRegistrasiPengguna" required>
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<label>TELEPON/HP</label>
-				</td>
-
-				<td>
-					:
-				</td>
-
-				<td>
-					<input type="text" name="teleponRegistrasiPengguna" required>
-				</td>
-			</tr>
-		</table>
-
-		<input type="submit" name="submitRegistrasiPengguna" value="Registrasi">
-
-	</form>
-
-	<p>Sudah Punya Akun? Klik <a href="login.php">Di Sini</a></p>
-
-	</center>
-
+  <center>
+    <p>Sudah Punya Akun? Klik <a href="login.php">Di Sini</a></p>
+  </center>
+  
 </body>
 </html>

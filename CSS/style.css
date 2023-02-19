@@ -1,8 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: "aharoni", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-/* sidebar */
+
+/*Form*/
+.formLoginRegist{
+  border: 3px solid #f1f1f1;
+  margin: 10% 30% 10px 30%;
+  border-radius: 8px;
+}
+
+form{
+  border: 3px solid #f1f1f1;
+  border-radius: 8px;
+}
+
+/*Input*/
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=file] {
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type=number], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 65%;
+  border-radius: 8px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/*div*/
 .sidebar {
   margin: 0;
   padding: 0;
@@ -33,39 +121,7 @@ body {
 div.content {
   margin-left: 200px;
   padding: 1px 16px;
-/*  height: 1000px;*/
   text-align: center;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
 }
 
 .container {
@@ -94,25 +150,6 @@ input[type=submit]:hover {
   clear: both;
 }
 
-input[type=file] {
-  /*width: 350px;*/
-  /*max-width: 100%;*/
-  color: #444;
-  padding: 5px;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #555;
-}
-
-input[type=file]::file-selector-button {
-  margin-right: 20px;
-  border: none;
-  background: #084cdf;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  cursor: pointer;
-}
 #relative {
   background-color: #f1f1f1;
   padding: 13px;
@@ -124,29 +161,13 @@ input[type=file]::file-selector-button {
   height: 150px;
 }
 
-    #rela {
-    background-color: #f1f1f1;
-    padding: 1px;
-    border-radius: 10px;
-    position: relative;
+#rela {
+  background-color: #f1f1f1;
+  padding: 1px;
+  border-radius: 10px;
+  position: relative;
   top: 15px;
-    left: 10px;
-    width: 99%;
-    height: 50px; }
-
-/*@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+  left: 10px;
+  width: 99%;
+  height: 50px;
 }
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}*/

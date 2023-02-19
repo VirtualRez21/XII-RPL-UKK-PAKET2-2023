@@ -30,8 +30,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <title>EDIT DATA PENGADUAN MASYARAKAT</title>
 </head>
 <body>
 
@@ -47,40 +49,39 @@
 
   <div class="container">
 
-  <form action="prosesUser.php" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="idLaporanPengaduan" value="<?php echo $varIdPengaduan; ?>">
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Subject:</label>
-    </div>
-    <div class="col-75">
-      <textarea id="subject" name="editLaporanPengaduan" placeholder="ISI LAPORAN ..." style="height:200px"><?php echo $varLaporan; ?></textarea>
-    </div>
+    <form action="prosesUser.php" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="idLaporanPengaduan" value="<?php echo $varIdPengaduan; ?>">
+
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject:</label>
+        </div>
+
+        <div class="col-75">
+          <textarea id="subject" name="editLaporanPengaduan" placeholder="ISI LAPORAN ..." style="height:200px"><?php echo $varLaporan; ?></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Foto:</label>
+        </div>
+
+        <div class="col-75">
+          <label for="images">
+            <input type="file" name="editFotoLaporanPengaduan" id="images" accept="image/*">
+          </label>
+        </div>
+
+      </div>
+
+      <br>
+      <div class="row">
+        <input type="submit" name="submitEditLaporanPengaduan" value="Submit">
+      </div>
+
+    </form>
   </div>
-
-   <div class="row">
-    <div class="col-25">
-      <label for="subject">Foto:</label>
-    </div>
-
-    <div class="col-75">
-  <label for="images">
-    <input type="file" name="editFotoLaporanPengaduan" id="images" accept="image/*">
-  </label>
-    </div>
-
-  </div>
-
-  <br>
-  <div class="row">
-    <input type="submit" name="submitEditLaporanPengaduan" value="Submit">
-  </div>
-
-  </form>
-
 </div>
-</div>
-
 </body>
-
 </html>

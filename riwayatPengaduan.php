@@ -24,7 +24,7 @@
 		}
 	</script>
 
-	<title>Riwayat Pengaduan</title>
+	<title>RIWAYAT PENGADUAN MASYARAKAT</title>
 </head>
 <body>
 

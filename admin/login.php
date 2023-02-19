@@ -20,45 +20,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>LOGIN PETUGAS PENGADUAN MASYARAKAT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <title>LOGIN PETUGAS PENGADUAN MASYARAKAT</title>
 </head>
+
 <body>
-	<center>
+  <form action="login.php" method="POST" class="formLoginRegist">
+    <h2 style="text-align: center;">FORM LOGIN PETUGAS</h2>
+    <div class="container">
+      <label for="usernameLoginPetugas"><b>Username:</b></label>
+      <input type="text" placeholder="Enter Username" name="usernameLoginPetugas" required>
 
-		<form action="login.php" method="POST">
+      <label for="passwordLoginPetugas"><b>Password:</b></label>
+      <input type="password" placeholder="Enter Password" name="passwordLoginPetugas" required>
+      
+      <center>
+        <button type="submit" name="submitLoginPetugas">Login</button>
+      </center> 
 
-		<table>
-			<tr>
-				<td>
-					Username
-				</td>
-				<td>
-					:
-				</td>
-				<td>
-					<input type="text" name="usernameLoginPetugas" required>
-				</td>
-			</tr>
+    </div>
+  </form>
 
-			<tr>
-				<td>
-					Password
-				</td>
-				<td>
-					:
-				</td>
-				<td>
-					<input type="password" name="passwordLoginPetugas" required>
-				</td>
-			</tr>
-		</table>
-
-		<input type="submit" name="submitLoginPetugas" value="Login">
-
-		</form>
-
-	</center>
 </body>
 </html>
