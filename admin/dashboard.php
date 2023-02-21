@@ -22,7 +22,7 @@
     <a href="#">DAFTAR PENGADUAN</a>
     <?php
       if($_SESSION['level'] == 'admin'){
-        echo "<a href='#'>TAMBAH PETUGAS</a>
+        echo "<a href='tambahPetugas.php'>TAMBAH PETUGAS</a>
         <a href='#'>LIHAT PETUGAS</a>";
       }
     ?>

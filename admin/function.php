@@ -42,4 +42,33 @@
 		}
 	}
 
+	class Registration extends Connection{
+		public function tambahPetugas($varNamaPetugas, $varUsernamePetugas, $varPasswordPetugas, $varTeleponPetugas){
+			$sql = "SELECT * FROM petugas WHERE username='$varUsernamePetugas';";
+			$result = mysqli_query($this->conn, $sql);
+
+			if(mysqli_num_rows($result) == 1){
+				$row = mysqli_fetch_assoc($result);
+
+				if($row['username'] == $varUsernamePetugas){
+					return 1;
+					// Username atau akun sudah ada
+				}
+			}
+			elseif(mysqli_num_rows($result) != 1){
+				$varPasswordPetugas = md5($varPasswordPetugas);
+
+				$sql = "INSERT INTO petugas VALUES(null, '$varNamaPetugas', '$varUsernamePetugas', '$varPasswordPetugas', '$varTeleponPetugas', 'petugas');";
+				$result = mysqli_query($this->conn, $sql);
+
+				return 10;
+				// Akun Berhasil Ditambah
+			}
+			else{
+				return 100;
+				// Akun tidak berhasil ditambah
+			}
+		}
+	}
+
 ?>
