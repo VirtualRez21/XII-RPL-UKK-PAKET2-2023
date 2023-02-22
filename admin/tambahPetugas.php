@@ -44,14 +44,14 @@ else{
 <body>
   <div class="sidebar">
     <a href="dashboard.php">DASHBOARD</a>
-    <a href="#">DAFTAR PENGADUAN</a>
+    <a href="lihatPengaduan.php">DAFTAR PENGADUAN</a>
     <?php
       if($_SESSION['level'] == 'admin'){
         echo "<a href='tambahPetugas.php' class='active'>TAMBAH PETUGAS</a>
         <a href='#'>LIHAT PETUGAS</a>";
       }
     ?>
-    <a href="#">LOGOUT</a>
+    <a href="logout.php">LOGOUT</a>
   </div>
 
   <div class="content2">
