@@ -8,6 +8,14 @@
   else{
     $sql = "SELECT * FROM pengaduan;";
     $result = mysqli_query($conn, $sql);
+
+    if(isset($_POST['submitStatusPengaduan'])){
+      $varIdPengaduan = $_POST['idLaporanPengaduanPengguna'];
+      $varValueProsesStatus = $_POST['prosesStatusPengaduan'];
+
+      $sql3 = "UPDATE pengaduan SET status='$varValueProsesStatus' WHERE id_pengaduan='$varIdPengaduan';";
+      $result3 = mysqli_query($conn, $sql3);
+    }
   }
 ?>
 
@@ -47,6 +55,7 @@
           <th>Laporan</th>
           <th>Foto</th>
           <th>Status</th>
+          <th>Action</th>
         </tr>
 
         <?php
@@ -83,10 +92,42 @@
           <td>
             <?php
               if($data['status'] == '0'){
-                echo "Belum Ditanggapi";
+              ?>
+
+              <form action="lihatPengaduan.php" method="POST">
+                <input type="hidden" name="idLaporanPengaduanPengguna" value="<?php echo $data['id_pengaduan'] ?>">
+                <select name="prosesStatusPengaduan">
+                  <option value="0">Belum Ditanggapi</option>
+                  <option value="proses">Verifikasi</option>
+                </select>
+
+                <input type="submit" name="submitStatusPengaduan" value="Submit">
+              </form>
+
+              <?php
               }
               elseif($data['status'] == 'proses'){
                 echo "Sedang Diproses";
+              }
+              elseif($data['selesai'] == 'selesai'){
+                echo "Laporan Selesai";
+              }
+              else{
+                echo "Laporan Invalid";
+              }
+            ?>
+          </td>
+          <td>
+            <?php
+              if($data['status'] == '0'){
+                echo "Silahkan Proses Status Terlebih Dahulu";
+              }
+              elseif($data['status'] == 'proses'){
+              ?>
+
+              <a href="prosesPengaduan.php?idPengaduan=<?php echo $data['id_pengaduan'] ?>">Lihat</a>
+
+              <?php
               }
               elseif($data['selesai'] == 'selesai'){
                 echo "Laporan Selesai";
