@@ -19,15 +19,19 @@
         echo notifikasi('Data Laporan Tidak Ditemukan', 'lihatPengaduan.php');
       }
       elseif($data != NULL){
-        if($data['status'] == 'selesai'){
-          echo notifikasi('Data tidak dapat diberi tanggapan lagi', 'lihatPengaduan.php');
+        $varNik = $data['nik'];
+        $sql2 = "SELECT * FROM masyarakat WHERE nik='$varNik';";
+        $result2 = mysqli_query($conn, $sql2);
+        $data2 = mysqli_fetch_assoc($result2); // data dari tabel masyarakat
+
+        $sql3 = "SELECT * FROM tanggapan WHERE id_pengaduan='$varIdPengaduan' ;";
+        $result3 = mysqli_query($conn, $sql3);
+
+        if(mysqli_num_rows($result3) == 0){
+          echo notifikasi('Tanggapan Belum Tersedia', 'lihatPengaduan.php');
         }
-        else{
-          $varNik = $data['nik'];
-          $sql2 = "SELECT * FROM masyarakat WHERE nik='$varNik';";
-          $result2 = mysqli_query($conn, $sql2);
-          $data2 = mysqli_fetch_assoc($result2); // data dari tabel masyarakat
-        }
+
+        $data3 = mysqli_fetch_assoc($result3); // data dari tabel tanggapan
       }
     }
   }
@@ -62,25 +66,8 @@
       <h4>Nama Pelapor: <?php echo $data2['nama'] ?></h4>
       <p><?php echo $data['isi_laporan'] ?></p>
       <img src="../media/laporan/<?php echo $data['foto'] ?>" width="300px">
-
-      <form action="prosesPetugas.php" method="POST">
-        <input type="hidden" name="idLaporanPengaduan" value="<?php echo $data['id_pengaduan'] ?>">
-        <div class="row">
-
-          <div>
-            <label for="tanggapanPetugas">Tanggapan:</label>
-          </div>
-
-          <div>
-            <textarea name="tanggapanPetugas" placeholder="Isi Tanggapan" style="height: 200px"></textarea>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <input type="submit" name="submitIsiTanggapanPengaduan" value="Submit">
-        </div>
-      </form>
+      <h4>Tanggapan Petugas</h4>
+      <p><?php echo $data3['tanggapan'] ?></p>
     </div>
   </div>
 

@@ -109,7 +109,7 @@
               elseif($data['status'] == 'proses'){
                 echo "Sedang Diproses";
               }
-              elseif($data['selesai'] == 'selesai'){
+              elseif($data['status'] == 'selesai'){
                 echo "Laporan Selesai";
               }
               else{
@@ -129,8 +129,10 @@
 
               <?php
               }
-              elseif($data['selesai'] == 'selesai'){
-                echo "Laporan Selesai";
+              elseif($data['status'] == 'selesai'){
+              ?>
+              <a href="lihatTanggapan.php?idPengaduan=<?php echo $data['id_pengaduan'] ?>">Lihat Tanggapan</a>
+              <?php
               }
               else{
                 echo "Laporan Invalid";

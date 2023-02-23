@@ -83,7 +83,7 @@
 								elseif($data['status'] == 'proses'){
 									echo "Sedang Diproses";
 								}
-								elseif($data['selesai'] == 'selesai'){
+								elseif($data['status'] == 'selesai'){
 									echo "Laporan Selesai";
 								}
 								else{
