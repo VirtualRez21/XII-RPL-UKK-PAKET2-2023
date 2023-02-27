@@ -48,7 +48,7 @@ else{
     <?php
       if($_SESSION['level'] == 'admin'){
         echo "<a href='tambahPetugas.php' class='active'>TAMBAH PETUGAS</a>
-        <a href='#'>LIHAT PETUGAS</a>";
+        <a href='lihatPetugas.php'>LIHAT PETUGAS</a>";
       }
     ?>
     <a href="logout.php">LOGOUT</a>

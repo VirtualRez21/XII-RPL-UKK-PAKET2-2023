@@ -93,9 +93,24 @@
 						</td>
 
 						<td>
-							<a href="editPengaduan.php?edit=<?php echo $data["id_pengaduan"] ?>">edit<i>&#x270F;</i></a>
-							<br>
-							<a onclick="return checkDelete()" href="prosesUser.php?delete=<?php echo $data['id_pengaduan'] ?>">Delete<i>&#x1F5D1;</i></a>
+							<?php
+								if($data['status'] == 'selesai'){
+								?>
+
+								<a href="lihatTanggapan.php?idPengaduan=<?php echo $data["id_pengaduan"] ?>">Lihat Tanggapan<i>&#x1F441;</i></a>
+								<br><br>
+
+								<?php
+								}
+								else{
+								?>
+								<a href="editPengaduan.php?edit=<?php echo $data["id_pengaduan"] ?>">edit<i>&#x270F;</i></a>
+								<br><br>
+								<a onclick="return checkDelete()" href="prosesUser.php?delete=<?php echo $data['id_pengaduan'] ?>">Delete<i>&#x1F5D1;</i></a>
+								<?php
+								}
+							?>
+							
 						</td>
 					</tr>
 
