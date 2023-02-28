@@ -6,7 +6,7 @@
     header('location: login.php');
   }
   else{
-    $sql = "SELECT * FROM pengaduan;";
+    $sql = "SELECT * FROM pengaduan ORDER BY id_pengaduan DESC ;";
     $result = mysqli_query($conn, $sql);
 
     if(isset($_POST['submitStatusPengaduan'])){

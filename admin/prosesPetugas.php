@@ -17,5 +17,8 @@
 
 		echo notifikasi('Pengaduan Berhasil Diberi Tanggapan', 'lihatPengaduan.php');
 	}
+	else{
+		echo notifikasi('Tidak dapat memproses', 'dashboard.php');
+	}
 
 ?>

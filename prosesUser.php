@@ -124,5 +124,8 @@
 			echo notifikasi('Data Berhasil Dihapus', 'riwayatPengaduan.php');
 		}
 	}
+	else{
+		echo notifikasi('Tidak dapat memproses', 'dashboard.php');
+	}
 	
 ?>

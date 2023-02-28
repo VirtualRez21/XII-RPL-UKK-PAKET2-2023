@@ -24,6 +24,9 @@
         $varLaporan = $result['isi_laporan'];
       }
     }
+    elseif(!isset($_GET['edit'])){
+      echo notifikasi('Tidak dapat membuka halaman', 'riwayatPengaduan.php');
+    }
   }
 ?>
 

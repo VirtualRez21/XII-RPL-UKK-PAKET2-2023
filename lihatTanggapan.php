@@ -39,6 +39,9 @@
         $data4 = mysqli_fetch_assoc($result4); // data dari tabel petugas
       }
     }
+    elseif(!isset($_GET['idPengaduan'])){
+      echo notifikasi('Tidak dapat membuka halaman', 'riwayatPengaduan.php');
+    }
   }
 ?>
 

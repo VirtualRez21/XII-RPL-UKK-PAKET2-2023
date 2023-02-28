@@ -30,6 +30,9 @@
         }
       }
     }
+    elseif(!isset($_GET['idPengaduan'])){
+      echo notifikasi('Tidak dapat membuka halaman', 'lihatPengaduan.php');
+    }
   }
 ?>
 
