@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2023 at 07:22 AM
+-- Generation Time: Apr 02, 2023 at 03:08 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -35,13 +35,6 @@ CREATE TABLE `masyarakat` (
   `telp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `masyarakat`
---
-
-INSERT INTO `masyarakat` (`nik`, `nama`, `username`, `password`, `telp`) VALUES
-('12345678', '12345678', '12345678', '25d55ad283aa400af464c76d713c07ad', '12345678');
-
 -- --------------------------------------------------------
 
 --
@@ -56,14 +49,6 @@ CREATE TABLE `pengaduan` (
   `foto` varchar(255) NOT NULL,
   `status` enum('0','proses','selesai') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `pengaduan`
---
-
-INSERT INTO `pengaduan` (`id_pengaduan`, `tgl_pengaduan`, `nik`, `isi_laporan`, `foto`, `status`) VALUES
-(5, '2023-02-15', '12345678', 'nadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telatnadya telat telat', '2023-02-1501-15-01pmIMG-20211014-WA0113.jpg', 'selesai'),
-(7, '2023-02-25', '12345678', 'nih bolos nih', '2023-02-2509-43-45am85331.jpg', 'proses');
 
 -- --------------------------------------------------------
 
@@ -80,14 +65,6 @@ CREATE TABLE `petugas` (
   `level` enum('admin','petugas') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `petugas`
---
-
-INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `username`, `password`, `telp`, `level`) VALUES
-(1, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', '0813XXXX2987', 'admin'),
-(2, 'uyiz', 'uyizdfkz', '25d55ad283aa400af464c76d713c07ad', '0852', 'petugas');
-
 -- --------------------------------------------------------
 
 --
@@ -101,13 +78,6 @@ CREATE TABLE `tanggapan` (
   `tanggapan` text NOT NULL,
   `id_petugas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tanggapan`
---
-
-INSERT INTO `tanggapan` (`id_tanggapan`, `id_pengaduan`, `tgl_tanggapan`, `tanggapan`, `id_petugas`) VALUES
-(3, 5, '2023-02-23', 'asdfgdsfgsfg', 1);
 
 --
 -- Indexes for dumped tables
@@ -148,19 +118,19 @@ ALTER TABLE `tanggapan`
 -- AUTO_INCREMENT for table `pengaduan`
 --
 ALTER TABLE `pengaduan`
-  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_pengaduan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tanggapan`
 --
 ALTER TABLE `tanggapan`
-  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_tanggapan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

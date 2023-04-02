@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
 /*Form*/
 .formLoginRegist{
@@ -155,7 +155,7 @@ button:hover {
 }
 
 #relative {
-  background-color: #f1f1f1;
+  background-color: blueviolet;
   padding: 13px;
   border-radius: 10px;
   position: relative;
@@ -166,7 +166,7 @@ button:hover {
 }
 
 #rela {
-  background-color: #f1f1f1;
+  background-color: yellowgreen;
   padding: 1px;
   border-radius: 10px;
   position: relative;
